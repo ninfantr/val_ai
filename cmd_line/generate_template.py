@@ -13,7 +13,7 @@ else:
     raise Exception(f"[ERROR] : tool is not supported in {platform.platform()}")
 
 current_dir = os.path.dirname(__file__)
-pkg_dir = os.path.join(current_dir,"..","src")
+pkg_dir = os.path.join(current_dir,"..")
 #print(f"importing {pkg_dir}")
 sys.path.append(pkg_dir)
 

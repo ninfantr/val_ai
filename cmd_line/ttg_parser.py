@@ -15,7 +15,7 @@ else:
     raise Exception(f"[ERROR] : tool is not supported in {platform.platform()}")
 
 current_dir = os.path.dirname(__file__)
-pkg_dir = os.path.join(current_dir,"..","src")
+pkg_dir = os.path.join(current_dir,"..")
 #print(f"importing {pkg_dir}")
 sys.path.append(pkg_dir)
 
@@ -36,8 +36,8 @@ parser.add_argument('-o', '--output', help='output directory. Default: output',d
 parser.add_argument('-model', help='select ML/DL model. Default: decision_tree . Available Options: '+ ",".join(available_models) , choices=available_models, default="decision_tree")
 parser.add_argument('-elaborate', help='Perform only elab to expand the dont care condition. Default: False (analysis stage does elab explicitly)',action='store_true',default=False)
 #parser.add_argument('-analysis',  help='Perform complete analysis of Truth Table. Default: True',action='store_true',default=True)
-parser.add_argument('-sort_x',    help='Sorted output along rows. Easy for comparsion. Default: True',action='store_true',default=False)
-parser.add_argument('-sort_y',    help='Sorted output along columns Easy for comparsion. Default: True',action='store_true',default=False)
+parser.add_argument('-sort_row',    help='Sorted output along rows. Easy for comparsion. Default: True',action='store_true',default=False)
+parser.add_argument('-sort_col',    help='Sorted output along columns Easy for comparsion. Default: True',action='store_true',default=False)
 #parser.add_argument('-template', help='Generate template of n dimension',type=int,default=0)
 
 args = parser.parse_args()

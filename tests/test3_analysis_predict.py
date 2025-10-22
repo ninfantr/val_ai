@@ -14,7 +14,7 @@ else:
     raise Exception(f"[ERROR] : tool is not supported in {platform.platform()}")
 
 # Required for local testing
-sys.path.append("../src/")
+sys.path.append("../")
 from val_ai import ttg
 
 ttg.analysis_elab("files/dataset.xlsx", do_predict_misses=True)
